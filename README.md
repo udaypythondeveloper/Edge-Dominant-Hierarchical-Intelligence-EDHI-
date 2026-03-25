@@ -12,6 +12,24 @@
   <img src="https://img.shields.io/badge/License-MIT-orange">
 </p>
 
+<p align="center">
+<strong>
+Deterministic, Low-Latency Intelligence Architecture for Real-World Autonomous Systems
+</strong>
+</p>
+
+---
+
+<h2>System Architecture Overview</h2>
+
+<p align="center">
+  <img src="docs/architecture.png" width="95%" style="border-radius:10px;">
+</p>
+
+<p align="center">
+Event-Driven Hybrid Intelligence Pipeline for Edge Robotics
+</p>
+
 ---
 
 <h2>Overview</h2>
@@ -21,19 +39,26 @@ Edge Dominant Hierarchical Intelligence (EDHI) is an open-source framework engin
 <strong>low-latency, energy-efficient, fully autonomous AI systems</strong> operating entirely at the edge.
 </p>
 
-<p>
-EDHI implements a tightly coupled intelligence stack across:
-</p>
-
 <ul>
-  <li><strong>Perception</strong> — sensor fusion, semantic understanding</li>
-  <li><strong>Planning</strong> — decision-making, trajectory generation</li>
-  <li><strong>Control</strong> — real-time actuation and feedback stabilization</li>
+<li><strong>Perception</strong> — sensor fusion, semantic understanding</li>
+<li><strong>Planning</strong> — decision-making, trajectory generation</li>
+<li><strong>Control</strong> — real-time actuation and feedback stabilization</li>
 </ul>
 
 <p>
-Unlike conventional architectures, EDHI enforces <strong>deterministic execution, local intelligence, and cross-layer coupling</strong>.
+EDHI enforces <strong>deterministic execution, local intelligence, and cross-layer feedback coupling</strong>,
+making it suitable for real-world autonomous systems where latency and reliability are critical.
 </p>
+
+---
+
+<h2>Why EDHI</h2>
+
+<ul>
+<li><strong>Traditional ROS Pipelines</strong> → loosely coupled, unpredictable latency</li>
+<li><strong>Cloud AI Systems</strong> → high latency, network dependency</li>
+<li><strong>EDHI</strong> → deterministic, edge-native, tightly integrated intelligence</li>
+</ul>
 
 ---
 
@@ -65,6 +90,33 @@ Unlike conventional architectures, EDHI enforces <strong>deterministic execution
 
 ---
 
+<h2>Execution Model</h2>
+
+<pre>
+Control Loop      : 100–1000 Hz (hard real-time)
+Perception Loop   : 10–60 Hz   (soft real-time)
+Planning Loop     : 1–10 Hz    (asynchronous)
+</pre>
+
+<ul>
+<li>Priority-based scheduling</li>
+<li>Zero-copy communication pipelines</li>
+<li>Deterministic latency guarantees</li>
+</ul>
+
+---
+
+<h2>System Guarantees</h2>
+
+<ul>
+<li><strong>Bounded Latency</strong> — deterministic perception-to-control pipeline</li>
+<li><strong>Edge Autonomy</strong> — zero dependency on external infrastructure</li>
+<li><strong>Graceful Degradation</strong> — cloud fallback without system failure</li>
+<li><strong>Real-Time Safety</strong> — prioritized control loop execution</li>
+</ul>
+
+---
+
 <h2>System Flow</h2>
 
 <pre>
@@ -73,18 +125,6 @@ Sensors → Perception → World Model → Planner → Controller → Actuators
                 +------------+-------------+
                    Feedback and State Sync
 </pre>
-
----
-
-<h2>Design Principles</h2>
-
-<ul>
-<li><strong>Edge Dominance</strong> — all intelligence loops run locally</li>
-<li><strong>Real-Time Determinism</strong> — bounded latency execution</li>
-<li><strong>Hardware Awareness</strong> — optimized for CPU, GPU, NPU</li>
-<li><strong>Hierarchical Decomposition</strong> — multi-layer intelligence</li>
-<li><strong>Cross-Layer Feedback</strong> — adaptive closed-loop system</li>
-</ul>
 
 ---
 
@@ -125,6 +165,30 @@ Sensors → Perception → World Model → Planner → Controller → Actuators
 
 ---
 
+<h2>Key Differentiators</h2>
+
+<ul>
+<li>Edge-first intelligence (no cloud dependency)</li>
+<li>Hierarchical closed-loop architecture</li>
+<li>Cross-layer feedback integration</li>
+<li>Hardware-aware inference optimization</li>
+<li>Deterministic execution guarantees</li>
+</ul>
+
+---
+
+<h2>Target Applications</h2>
+
+<ul>
+<li>Humanoid robotics (locomotion + manipulation)</li>
+<li>Autonomous mobile robots</li>
+<li>Industrial automation systems</li>
+<li>Edge AI drones</li>
+<li>Assistive robotics platforms</li>
+</ul>
+
+---
+
 <h2>Technology Stack</h2>
 
 <table>
@@ -138,11 +202,28 @@ Sensors → Perception → World Model → Planner → Controller → Actuators
 
 ---
 
+<h2>Repository Structure</h2>
+
+<pre>
+edhi/
+ ├── docs/
+ │    └── architecture.png
+ ├── perception/
+ ├── planning/
+ ├── control/
+ ├── runtime/
+ ├── models/
+ ├── scripts/
+ └── examples/
+</pre>
+
+---
+
 <h2>Installation</h2>
 
 <pre>
-git clone https://github.com/your-org/edhi.git
-cd edhi
+git clone https://github.com/udaypythondeveloper/Edge-Dominant-Hierarchical-Intelligence-EDHI-.git
+cd Edge-Dominant-Hierarchical-Intelligence-EDHI-
 
 ./scripts/setup.sh
 
@@ -182,9 +263,9 @@ make -j$(nproc)
 <ul>
 <li>Unified world model API</li>
 <li>Multi-robot coordination</li>
-<li>Learning-based control</li>
+<li>Learning-based control integration</li>
 <li>Digital twin simulation</li>
-<li>Safety verification</li>
+<li>Safety-critical verification</li>
 </ul>
 
 ---
@@ -196,7 +277,7 @@ make -j$(nproc)
 <li>Create feature branch</li>
 <li>Commit with documentation</li>
 <li>Submit pull request</li>
-<li>Pass all tests</li>
+<li>Ensure all tests pass</li>
 </ol>
 
 ---
@@ -209,14 +290,10 @@ MIT License
 
 <h2>Vision</h2>
 
-<p>
-EDHI establishes a paradigm where intelligence is:
-</p>
-
 <ul>
-<li>Local (not cloud-dependent)</li>
-<li>Hierarchical (not monolithic)</li>
-<li>Deterministic (not best-effort)</li>
+<li>Local intelligence (no cloud dependency)</li>
+<li>Hierarchical system design</li>
+<li>Deterministic execution</li>
 </ul>
 
 <p align="center">
